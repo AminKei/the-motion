@@ -1,103 +1,67 @@
-import Image from "next/image";
+"use client";
+import { motion } from "framer-motion";
+import Hero from "@/components/layouts/home_layout/Hero";
+import Footer from "@/components/layouts/footer/Footer";
+import InfiniteMenuBased from "@/components/based_component/InfiniteMenu";
+import SplashCursor from "@/components/ui/SplashCursor/SplashCursor";
+import Header from "@/components/layouts/header/Header";
+import MyNavigationBar from "@/components/based_component/NavigationBar";
+import Lanyard from "@/components/ui/Lanyard/Lanyard";
+import { MacbookScroll } from "@/components/ui/ScrollMack/ScrollMack";
+import { WorldMapDemo } from "@/components/based_component/WorldMap";
+import { GoogleGeminiEffectDemo } from "@/components/based_component/GoogleGeminiEffectDemo";
+import { GlowingEffectDemo } from "@/components/based_component/GlowingEffect";
+import LogoLoopDemo from "@/components/based_component/LogoLoop";
+import ScrollRevealDemo from "@/components/based_component/ScrollReveal";
+import { TracingBeamDemo } from "@/components/based_component/TracingBeamDemo";
+import { HeroParallaxDemo } from "@/components/based_component/HeroParallaxDemo";
+import CircularGallery from "@/components/ui/CircularGallery/CircularGallery";
+import EarthComponent from "@/components/based_component/EarthComponent";
+import AboutUs from "@/components/ui/AboutUs/AboutUs";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <motion.div
+      className="min-h-screen bg-[#000000] text-white -mb-10"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <Header />
+      <MyNavigationBar />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <SplashCursor />
+      <Lanyard />
+
+      <Hero />
+      <LogoLoopDemo />
+      <div
+        style={{
+          height: "600px",
+          position: "relative",
+          margin: "100px",
+          marginTop: "-10vh",
+        }}
+      >
+        <CircularGallery
+          bend={3}
+          textColor="#ffffff"
+          borderRadius={0.05}
+          scrollEase={0.02}
+        />
+      </div>
+      <GlowingEffectDemo />
+      <TracingBeamDemo />
+      <MacbookScroll src="https://i.pinimg.com/originals/77/14/c2/7714c2b3cba5bec891fdfea03dd25229.gif" />
+      <WorldMapDemo />
+      <GoogleGeminiEffectDemo />
+
+      <InfiniteMenuBased />
+      <ScrollRevealDemo />
+      <HeroParallaxDemo />
+      <AboutUs />
+      <EarthComponent />
+      <Footer />
+    </motion.div>
   );
 }
