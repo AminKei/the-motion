@@ -18,6 +18,7 @@ import { HeroParallaxDemo } from "@/components/based_component/HeroParallaxDemo"
 import CircularGallery from "@/components/ui/CircularGallery/CircularGallery";
 import EarthComponent from "@/components/based_component/EarthComponent";
 import AboutUs from "@/components/ui/AboutUs/AboutUs";
+import FoldAnimeText from "@/components/based_component/FoldAnimeText";
 
 export default function Home() {
   return (
@@ -50,9 +51,10 @@ export default function Home() {
           scrollEase={0.02}
         />
       </div>
+      <FoldAnimeText/>
       <GlowingEffectDemo />
       <TracingBeamDemo />
-      <MacbookScroll src="https://i.pinimg.com/originals/77/14/c2/7714c2b3cba5bec891fdfea03dd25229.gif" />
+      <MacbookScroll src="https://i.pinimg.com/1200x/63/db/73/63db736df1eeb5bc584aa4b70c08b4dd.jpg" />
       <WorldMapDemo />
       <GoogleGeminiEffectDemo />
 

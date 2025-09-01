@@ -77,7 +77,7 @@ const Hero = () => {
 
       {/* Globe Component */}
       <motion.div
-        className="top-1/4 absolute "
+        className="top-1/5 absolute "
         style={{
           scale: globeScale,
           // translateY: 50, // کمی بالا برای جلوگیری از چسبید  ن به لبه
@@ -91,7 +91,7 @@ const Hero = () => {
           pointOfView={{
             lat: 0,
             lng: 0,
-            altitude: 2.5, // فاصله دوربین از کره زمین
+            altitude: 3, // فاصله دوربین از کره زمین
           }}
           onGlobeReady={() => {
             if (globeRef.current) {

@@ -57,25 +57,11 @@ const Lanyard = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: any) => {
     const card = e.currentTarget.getBoundingClientRect();
     const mouseX = e.clientX - card.left - card.width / 2;
     const mouseY = e.clientY - card.top - card.height / 2;
     setPosition({ x: mouseX / 6, y: mouseY / 6 });
-  };
-
-  const handleClick = () => {
-    controls.start({
-      scale: [1, 1.4, 0.8, 1],
-      y: [0, -40, 20, 0],
-      rotate: [0, 5, -5, 0],
-      transition: {
-        type: "spring",
-        stiffness: 500,
-        damping: 12,
-        duration: 0.7,
-      },
-    });
   };
 
   return (
@@ -108,7 +94,6 @@ const Lanyard = () => {
           <motion.div
             className="w-72 h-96 bg-gradient-to-br bg-black rounded-xl shadow-2xl flex items-center justify-center flex-col text-center p-8 cursor-pointer relative overflow-hidden backdrop-blur-md border "
             animate={controls}
-            onClick={handleClick}
             whileHover={{
               scale: 1.02,
               // boxShadow: "0 0 30px rgba(59, 130, 246, 0.7)",

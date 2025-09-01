@@ -17,7 +17,7 @@ const imageLogos = [
 
 export default function LogoLoopDemo() {
   return (
-    <div style={{ height: '200px', width:"85%", left:"8%" , position: 'relative', overflow: 'hidden', backgroundColor:"transparent"}}>
+    <div style={{ height: '200px', width:"85%", left:"8%" , position: 'relative', overflow: 'hidden'}}>
       <LogoLoop
         logos={techLogos}
         speed={120}
@@ -27,7 +27,7 @@ export default function LogoLoopDemo() {
         pauseOnHover
         scaleOnHover
         fadeOut
-        fadeOutColor="#ffffff"
+        // fadeOutColor="#ffffff"
         ariaLabel="Technology partners"
       />
     </div>

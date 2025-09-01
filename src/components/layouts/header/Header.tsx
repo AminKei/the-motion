@@ -1,5 +1,4 @@
 "use client";
-import TopRightMenu from "@/components/based_component/TopRightMenu";
 import React, { useState } from "react";
 
 const Header = () => {

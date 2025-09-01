@@ -2751,7 +2751,7 @@ react-confetti@^6.4.0:
   dependencies:
     tween-functions "^1.2.0"
 
-"react-dom@^18.0.0 || ^19.0.0", "react-dom@^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0", react-dom@^19, react-dom@^19.0.0, react-dom@^19.0.0-rc.1, react-dom@>=16.13, react-dom@19.1.0:
+"react-dom@^18.0.0 || ^19.0.0", "react-dom@^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0", react-dom@^19, react-dom@^19.0.0, react-dom@^19.0.0-rc.1, react-dom@>=16.13, react-dom@>=18.0.0, react-dom@19.1.0:
   version "19.1.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-19.1.0.tgz"
   integrity sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g==
@@ -2790,6 +2790,11 @@ react-reconciler@^0.31.0:
   integrity sha512-7Ob7Z+URmesIsIVRjnLoDGwBEG/tVitidU0nMsqX/eeJaLY89RISO/10ERe0MqmzuKUUB1rmY+h1itMbUHg9BQ==
   dependencies:
     scheduler "^0.25.0"
+
+react-scroll-motion@^0.3.5:
+  version "0.3.5"
+  resolved "https://registry.npmjs.org/react-scroll-motion/-/react-scroll-motion-0.3.5.tgz"
+  integrity sha512-TMlk0IEc2WsU5+3P+RHEir7KcdjxAvIitW7aABV01k9LMrsZucwQWQUq0dS1QwySGaQXUT3mujDJJYPeqDjshQ==
 
 react-typed@^2.0.12:
   version "2.0.12"

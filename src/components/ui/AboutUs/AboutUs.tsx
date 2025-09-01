@@ -212,7 +212,7 @@ export default function AboutUs() {
                       {member.name}
                     </h3>
                     <p className="text-gray-200 mb-4">{member.role}</p>
-                    <button className="mt-auto inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-md hover:from-blue-500 hover:to-purple-500 transition-all">
+                    <button className="mt-auto inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-md hover:from-blue-500 hover:to-purple-500 transition-all">
                       See resume
                     </button>
                   </div>
