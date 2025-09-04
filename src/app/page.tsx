@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import Hero from "@/components/layouts/home_layout/Hero";
 import Footer from "@/components/layouts/footer/Footer";
 import InfiniteMenuBased from "@/components/based_component/InfiniteMenu";
 import SplashCursor from "@/components/ui/SplashCursor/SplashCursor";
@@ -8,7 +7,6 @@ import Header from "@/components/layouts/header/Header";
 import MyNavigationBar from "@/components/based_component/NavigationBar";
 import Lanyard from "@/components/ui/Lanyard/Lanyard";
 import { MacbookScroll } from "@/components/ui/ScrollMack/ScrollMack";
-import { WorldMapDemo } from "@/components/based_component/WorldMap";
 import { GoogleGeminiEffectDemo } from "@/components/based_component/GoogleGeminiEffectDemo";
 import { GlowingEffectDemo } from "@/components/based_component/GlowingEffect";
 import LogoLoopDemo from "@/components/based_component/LogoLoop";
@@ -19,8 +17,19 @@ import CircularGallery from "@/components/ui/CircularGallery/CircularGallery";
 import EarthComponent from "@/components/based_component/EarthComponent";
 import AboutUs from "@/components/ui/AboutUs/AboutUs";
 import FoldAnimeText from "@/components/based_component/FoldAnimeText";
+import dynamic from "next/dynamic";
+import ScreenLoading from "@/components/Spashed/ScreenLoading";
+import { WorldMapDemo } from "@/components/based_component/WorldMapDemo";
 
 export default function Home() {
+  const LazyHero = dynamic(
+    () => import("@/components/layouts/home_layout/Hero"),
+    {
+      ssr: true,
+      loading: () => <ScreenLoading />,
+    }
+  );
+
   return (
     <motion.div
       className="min-h-screen bg-[#000000] text-white -mb-10"
@@ -34,7 +43,7 @@ export default function Home() {
       <SplashCursor />
       <Lanyard />
 
-      <Hero />
+      <LazyHero />
       <LogoLoopDemo />
       <div
         style={{
@@ -51,7 +60,7 @@ export default function Home() {
           scrollEase={0.02}
         />
       </div>
-      <FoldAnimeText/>
+      <FoldAnimeText />
       <GlowingEffectDemo />
       <TracingBeamDemo />
       <MacbookScroll src="https://i.pinimg.com/1200x/63/db/73/63db736df1eeb5bc584aa4b70c08b4dd.jpg" />
